@@ -150,7 +150,7 @@ namespace Game
         private void ChangeState(LocomotionState state)
         {
             _currentState = state;
-
+            
             string animationName = state switch
             {
                 LocomotionState.Idle => _idle,

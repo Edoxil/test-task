@@ -5,7 +5,6 @@ namespace Game
     public class CharacterMovement : MonoBehaviour
     {
         [SerializeField] private float _maxSpeed = 5f;
-        [SerializeField] private float _minSpeed = 1.5f;
 
         [SerializeField] private float _acceleration = 10f;
         [SerializeField] private float _deceleration = 15f;
@@ -30,7 +29,7 @@ namespace Game
 
             float desiredSpeed = _maxSpeed;
             float brakingSpeed = Mathf.Sqrt(2f * _deceleration * absDistance);
-            desiredSpeed = Mathf.Min(desiredSpeed, brakingSpeed);
+            desiredSpeed = Mathf.Min(desiredSpeed, brakingSpeed);   
 
             if (absDistance < _deadZone)
                 desiredSpeed = 0f;

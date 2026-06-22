@@ -13,7 +13,12 @@ namespace Game
             _input.ManualUpdate();
             _movement.Move(_input.MouseWorldPosition);
             _animator.UpdateLocomotion(_movement.NormalizedSpeed);
+        }
+
+        private void LateUpdate()
+        {
             _animator.UpdateAim(_input.AimEnabled, _input.MouseWorldPosition);
+
         }
 
     }
